@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1: Basic HTML Page | Interactive Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Google Sans';
+      background: #f9fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-wrapper {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin-bottom: 1.25rem;
+      border-left: 6px solid #3b82f6;
+      padding-left: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 1.8rem 0 1rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+
+    .image-container {
+      margin: 2rem 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 24px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.01);
+      box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-caption {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: #64748b;
+      font-style: italic;
+      text-align: center;
+    }
+
+    hr {
+      margin: 2rem 0 1rem;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+    }
+
+    .task-note {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.4rem;
+      border-radius: 12px;
+      font-size: 0.98rem;
+      color: #1e3a8a;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .task-note strong {
+      color: #1d4ed8;
+    }
+
+    /* Responsive Code */
+    @media (max-width: 600px) {
+      .page-wrapper {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 2rem;
+        padding-left: 0.9rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Interactive Web</h1>
+
+    <h2>Task 1 — Basic HTML Page</h2>
+
+    <p>
+      This page satisfies the <strong>Task 1</strong> requirements: a basic HTML structure 
+      with <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags; 
+      a descriptive <code>&lt;title&gt;</code>; and content including headings, paragraphs, 
+      and an image — all rendering correctly in any modern browser.
+    </p>
+
+    <p>
+      The layout below is fully responsive, cleanly separated, and ready for further 
+      enhancements like API integration and CSS preprocessing in later tasks. 
+      The image is embedded from a reliable CDN (Unsplash.com) to ensure it loads 
+      without external dependencies.
+    </p>
+
+    <div class="image-container">
+      <img 
+        src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Qm9va3N8ZW58MHx8MHx8fDA%3D" 
+        alt="A scenic landscape placeholder image from Picsum Photos, representing nature with mountains and sky."
+      <div class="image-caption">
+        A Sample image — <em>placeholder from unsplash.com</em>
+      </div>
+    </div>
+
+    <h2>📄 Structure & Rendering</h2>
+
+    <p>
+      Every required element is present: the <code>&lt;head&gt;</code> contains the 
+      <code>&lt;title&gt;</code> (visible in the browser tab), while the 
+      <code>&lt;body&gt;</code> holds the visible content — headings, paragraphs, and the image. 
+      The page uses semantic HTML5 and minimal CSS for a pleasant reading experience.
+    </p>
+
+    <hr>
+
+    <div class="task-note">
+      <strong>✅ Task 1 complete.</strong> Save this file as <code>index.html</code> and open it 
+      in any browser — the structure renders correctly, and all required elements 
+      (title, headings, paragraphs, image) are present.
+    </div>
+  </div>
+</body>
+</html>

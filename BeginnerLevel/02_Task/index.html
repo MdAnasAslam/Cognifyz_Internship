@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 | Inline CSS Styling Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Google Sans';
+      padding: 2rem 1.5rem;
+      background: #f5f7fb; /* subtle page background, not part of the inline demo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page-wrapper {
+      max-width: 960px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.15);
+      padding: 2.5rem 2rem;
+    }
+    code {
+      font-family: 'Google Sans';
+      background: #eef2f6;
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.9em;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <h1 style="
+          color: #1e3a8a;               
+          font-size: 2.6rem;             
+          background-color: #dbeafe;     
+          padding: 0.75rem 1.5rem;       
+          border-radius: 20px;
+          margin-bottom: 1.5rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          border: 2px solid #3b82f6;
+          text-align: center;
+        ">
+      | Task 2: Inline CSS Styling.
+    </h1>
+
+    <p style="
+          color: #7c2d12;                
+          font-size: 1.25rem;
+          background-color: #fff7ed;     
+          padding: 1.25rem 1.5rem;
+          border-radius: 24px;
+          margin-bottom: 1.8rem;
+          border-left: 8px solid #f97316;
+          border-right: 8px solid #f97316;
+          line-height: 1.6;
+        ">
+      <strong>Inline CSS</strong> applies styles directly to an HTML element using the 
+      <code>style</code> attribute. This method is great for quick tests, but for larger 
+      projects, external or internal stylesheets are preferred.
+    </p>
+
+    <p style="
+          color: #0f172a;
+          font-size: 1.1rem;
+          background-color: #f1f5f9;
+          padding: 1.2rem 1.5rem;
+          border-radius: 20px;
+          margin-bottom: 2rem;
+          border: 1px dashed #94a3b8;
+        ">
+      Below are examples of <strong>different inline styles</strong> applied to headings, 
+      text, and boxes. Each element uses its own <code>style</code> attribute — no classes, 
+      no external CSS for the demo. Try changing values in the code and refresh the browser!
+    </p>
+
+    <h2 style="
+          color: #b91c1c;                
+          font-size: 2rem;
+          background-color: #fee2e2;     
+          padding: 0.6rem 1.2rem;
+          border-radius: 16px;
+          display: inline-block;
+          margin: 0.5rem 0 1rem 0;
+          border: 2px solid #ef4444;
+        ">
+       Red heading | size 2rem
+    </h2>
+
+    <h2 style="
+          color: #065f46;                
+          font-size: 1.5rem;
+          background-color: #d1fae5;     
+          padding: 0.6rem 1.2rem;
+          border-radius: 16px;
+          display: inline-block;
+          margin: 0.5rem 0 1.5rem 0;
+          border: 2px solid #10b981;
+        ">
+       Green heading | size 1.5rem
+    </h2>
+
+    <p style="
+          color: #1e40af;                
+          font-size: 1.35rem;
+          background-color: #e0f2fe;     
+          padding: 1.2rem 1.5rem;
+          border-radius: 20px;
+          margin-bottom: 1.8rem;
+          border: 2px solid #38bdf8;
+          font-weight: 500;
+        ">
+      | This paragraph has a <strong>larger font (1.35rem)</strong>, blue text, 
+      and a soft blue background — all applied inline.
+    </p>
+
+    <p style="
+          color: #f8fafc;                
+          font-size: 0.95rem;
+          background-color: #1e293b;     
+          padding: 1rem 1.5rem;
+          border-radius: 40px;
+          margin-bottom: 2rem;
+          text-align: center;
+          letter-spacing: 0.3px;
+        ">
+      |  Small light text on dark background — inline style (color, size, background).
+    </p>
+
+    <div style="
+          background-color: #fef9c3;     /* light yellow */
+          color: #854d0e;                /* dark yellow/brown */
+          padding: 1.5rem;
+          border-radius: 28px;
+          border: 2px solid #eab308;
+          margin-bottom: 2rem;
+          box-shadow: 0 6px 0 #ca8a04;
+        ">
+      <h3 style="
+            color: #a16207;
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            background: transparent;
+          ">
+        |  Box with inline styles
+      </h3>
+      <p style="
+            color: #713f12;
+            font-size: 1.05rem;
+            background: transparent;
+            margin-bottom: 0;
+          ">
+        This entire box (background, border, shadow, padding, text colors) is styled 
+        using inline CSS on the <code>&lt;div&gt;</code>, <code>&lt;h3&gt;</code>, and 
+        <code>&lt;p&gt;</code> elements. No external CSS classes were used.
+      </p>
+    </div>
+
+    <hr style="
+          margin: 2rem 0 1.5rem;
+          border: 0;
+          height: 2px;
+          background: linear-gradient(90deg, #cbd5e1, #3b82f6, #cbd5e1);
+        ">
+
+    <p style="
+          color: #334155;
+          font-size: 1rem;
+          background-color: #f8fafc;
+          padding: 1.25rem 1.5rem;
+          border-radius: 20px;
+          border: 1px solid #cbd5e1;
+          margin-bottom: 0;
+        ">
+      <strong> Task 2 complete:</strong> Inline CSS styles were applied directly to HTML elements 
+      to change <span style="color: #b91c1c; font-weight: 600;">font color</span>, 
+      <span style="color: #1d4ed8; font-weight: 600;">size</span>, and 
+      <span style="background-color: #fde68a; padding: 0.1rem 0.4rem; border-radius: 6px; font-weight: 600;">background color</span>. 
+      Various combinations were tested and are visible above.
+    </p>
+
+  </div>
+</body>
+</html>
