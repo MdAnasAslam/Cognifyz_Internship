@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 | Responsive Design with Media Queries</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">|</span>
+        <span class="logo-text">Responsive<span class="logo-accent">Demo</span></span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="hero-title">Design that <span class="highlight">adapts</span> to every screen</h1>
+      <p class="hero-subtitle">
+        Resize the browser window — the layout, font sizes, and spacing change 
+        smoothly thanks to media queries in an external CSS file.
+      </p>
+      <div class="hero-actions">
+        <a href="#showcase" class="btn btn-primary">See the grid</a>
+        <a href="#features" class="btn btn-outline">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section features">
+    <div class="container">
+      <h2 class="section-title">Responsive building blocks</h2>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon"><i class="ri-ruler-2-fill"></i></div>
+          <h3>Fluid layout</h3>
+          <p>Grid changes from three columns on desktop to a single column on mobile using <code>grid-template-columns</code> and media queries.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="ri-ruler-fill"></i></div>
+          <h3>Scalable type</h3>
+          <p>Font sizes use <code>clamp()</code> and breakpoint‑specific values to stay readable on phones, tablets, and large screens.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="ri-multi-image-fill"></i></div>
+          <h3>Flexible media</h3>
+          <p>Images and cards never overflow — <code>max-width: 100%</code> and padding adjustments keep everything usable.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="showcase" class="section showcase">
+    <div class="container">
+      <h2 class="section-title">Gallery that reflows</h2>
+      <p class="section-subtitle">On desktop you see three images per row; on tablet two; on mobile one.</p>
+      <div class="grid-gallery">
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/1015/600/400" alt="Mountain landscape with a river" loading="lazy">
+          <figcaption>Mountain view · 600×400</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/1025/600/400" alt="Pug dog sitting on grass" loading="lazy">
+          <figcaption>Curious pug · 600×400</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/1043/600/400" alt="Forest path with tall trees" loading="lazy">
+          <figcaption>Forest trail · 600×400</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title" style="text-align:left; margin-bottom:1.2rem;">Why responsive matters</h2>
+          <p>Mobile traffic now exceeds desktop. A responsive layout ensures that text stays legible, buttons remain tappable, and images scale gracefully — without horizontal scrolling or zooming.</p>
+          <p>This page uses an external <code>styles.css</code> with three main breakpoints:</p>
+          <ul class="breakpoint-list">
+            <li><span class="bp-badge">≤ 480px</span> — phones (single column, smaller padding)</li>
+            <li><span class="bp-badge">481–768px</span> — large phones / small tablets (2‑column grids)</li>
+            <li><span class="bp-badge">≥ 1024px</span> — desktops (3‑column layouts, larger type)</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://picsum.photos/id/1067/800/600" alt="Person working on a laptop with code on screen" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Responsive Demo · Task 3 — External CSS + Media Queries</p>
+      <p class="footer-note">Resize the window to see the layout change.</p>
+      <p>made by <a style="color: white" href="https://github.com/MdAnasAslam">Md Anas Aslam</a></p>
+    </div>
+  </footer>
+</body>
+</html>
