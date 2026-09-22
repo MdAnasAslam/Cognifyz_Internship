@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling & Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-card">
+            <!-- Header Start Here -->
+            <div class="form-header">
+                <h1>Create your account</h1>
+                <p>Join us today — it only takes a minute.</p>
+            </div>
+
+            <!-- Form start here -->
+            <form id="registrationForm" novalidate>
+                <div class="form-group" data-field="name">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">👤</span>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your Name"
+                            autocomplete="name"
+                            required
+                            minlength="3"
+                            maxlength="50"
+                        >
+                    </div>
+                    <p class="error-msg" id="nameError"></p>
+                </div>
+
+                <div class="form-group" data-field="email">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">📧</span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="test@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                    <p class="error-msg" id="emailError"></p>
+                </div>
+
+                <div class="form-group" data-field="username">
+                    <label for="username">Username <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">@</span>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="username123"
+                            autocomplete="username"
+                            required
+                            minlength="4"
+                            maxlength="20"
+                            pattern="^[a-zA-Z0-9_]+$"
+                        >
+                    </div>
+                    <p class="hint">Letters, numbers and underscores only (4–20 chars)</p>
+                    <p class="error-msg" id="usernameError"></p>
+                </div>
+
+                <div class="form-group" data-field="password">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🔒</span>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            required
+                            minlength="8"
+                        >
+                        <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                            <span id="toggleIcon">👁️</span>
+                        </button>
+                    </div>
+                    <div class="strength-meter" id="strengthMeter">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <span class="strength-text" id="strengthText">Enter a password</span>
+                    </div>
+                    <p class="error-msg" id="passwordError"></p>
+                </div>
+
+                <div class="form-group" data-field="confirmPassword">
+                    <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🔐</span>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <button type="button" class="toggle-password" id="toggleConfirm" aria-label="Show password">
+                            <span id="toggleConfirmIcon">👁️</span>
+                        </button>
+                    </div>
+                    <p class="error-msg" id="confirmPasswordError"></p>
+                </div>
+
+                <div class="form-group" data-field="phone">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">📱</span>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your Number"
+                            autocomplete="tel"
+                            pattern="^[0-9+\-\s()]{7,20}$"
+                        >
+                    </div>
+                    <p class="hint">Optional — digits, spaces, +, -, ( ) only</p>
+                    <p class="error-msg" id="phoneError"></p>
+                </div>
+
+                <div class="form-group" data-field="country">
+                    <label for="country">Country <span class="required">*</span></label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🌍</span>
+                        <select id="country" name="country" required>
+                            <option value="">-- Select your country --</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                            <option value="de">Germany</option>
+                            <option value="fr">France</option>
+                            <option value="in">India</option>
+                            <option value="jp">Japan</option>
+                            <option value="br">Brazil</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <p class="error-msg" id="countryError"></p>
+                </div>
+
+                <div class="form-group checkbox-group" data-field="terms">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkbox-text">
+                            I agree to the <a href="#" onclick="return false;">Terms of Service</a>
+                            and <a href="#" onclick="return false;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <p class="error-msg" id="termsError"></p>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Create Account</span>
+                    <span class="btn-spinner" id="btnSpinner"></span>
+                </button>
+
+                <div class="success-msg" id="successMsg">
+                    ✅ Account created successfully!
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
