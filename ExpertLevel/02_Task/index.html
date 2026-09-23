@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Preprocessing Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar Here -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#" class="navbar__brand">Sass<span>Demo</span></a>
+            <ul class="navbar__menu">
+                <li><a href="#" class="navbar__link navbar__link--active">Home</a></li>
+                <li><a href="#" class="navbar__link">Features</a></li>
+                <li><a href="#" class="navbar__link">Components</a></li>
+                <li><a href="#" class="navbar__link">Docs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero__title">CSS Preprocessing with Sass</h1>
+        <p class="hero__subtitle">
+            Experience the power of variables, nesting, mixins, and functions 
+            to write cleaner, more maintainable CSS.
+        </p>
+        <div class="hero__actions">
+            <a href="#" class="btn btn--primary btn--lg">Get Started</a>
+            <a href="#" class="btn btn--outline btn--lg">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Alerts Demo -->
+        <section class="demo">
+            <h2 class="demo__title">Alert Components</h2>
+            <div class="alert alert--info">ℹ️ This is an informational alert message.</div>
+            <div class="alert alert--success">✅ Success! Your changes have been saved.</div>
+            <div class="alert alert--warning">⚠️ Warning: Please review your input.</div>
+            <div class="alert alert--danger">❌ Error: Something went wrong.</div>
+        </section>
+
+        <!-- Cards Demo -->
+        <section class="demo">
+            <h2 class="demo__title">Card Components</h2>
+            <div class="demo__grid">
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Variables</h3>
+                        <span class="card__badge">New</span>
+                    </div>
+                    <div class="card__body">
+                        Store colors, fonts, and spacing values in variables 
+                        for consistent styling across your project.
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn--primary">Learn</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Nesting</h3>
+                        <span class="card__badge card__badge--success">Popular</span>
+                    </div>
+                    <div class="card__body">
+                        Nest your CSS selectors to match your HTML structure 
+                        and write more readable stylesheets.
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn--secondary">Learn</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Mixins</h3>
+                        <span class="card__badge card__badge--warning">Pro</span>
+                    </div>
+                    <div class="card__body">
+                        Create reusable blocks of CSS that can be included 
+                        throughout your stylesheets.
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="btn btn--outline">Learn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Demo -->
+        <section class="demo">
+            <h2 class="demo__title">Button Variants</h2>
+            <div class="text-center mb-lg">
+                <button class="btn btn--primary">Primary Button</button>
+                <button class="btn btn--secondary">Secondary Button</button>
+                <button class="btn btn--danger">Danger Button</button>
+                <button class="btn btn--outline">Outline Button</button>
+            </div>
+            <div class="text-center">
+                <button class="btn btn--primary btn--lg">Large Primary</button>
+                <button class="btn btn--secondary btn--lg">Large Secondary</button>
+            </div>
+        </section>
+
+        <!-- Code Example -->
+        <section class="demo">
+            <h2 class="demo__title">Sass Features Used</h2>
+            <div class="code-block">
+                <code>
+// Variables<br>
+$primary-color: #3498db;<br>
+$font-size-base: 16px;<br><br>
+
+// Nesting<br>
+.navbar {<br>
+&nbsp;&nbsp;&__brand { ... }<br>
+&nbsp;&nbsp;&__menu { ... }<br>
+&nbsp;&nbsp;&__link {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&:hover { ... }<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+// Mixins<br>
+@mixin flex-center {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;justify-content: center;<br>
+&nbsp;&nbsp;align-items: center;<br>
+}<br><br>
+
+// Functions<br>
+background: darken($primary-color, 10%);
+                </code>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__text">
+            Built with ❤️ using <a href="https://sass-lang.com/" target="_blank">Sass</a> | 
+            CSS Preprocessing Demo
+        </p>
+    </footer>
+</body>
+</html>

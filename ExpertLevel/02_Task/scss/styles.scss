@@ -1,0 +1,153 @@
+// Import partials
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+// Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: $text-color;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+}
+
+// Hero Section
+.hero {
+  text-align: center;
+  padding: $spacing-xxl $spacing-xl;
+  margin-bottom: $spacing-xxl;
+  
+  &__title {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    @include gradient-text(linear-gradient(135deg, $primary-color, $secondary-color));
+    
+    @include respond-to(md) {
+      font-size: $font-size-xxl * 1.5;
+    }
+  }
+  
+  &__subtitle {
+    font-size: $font-size-lg;
+    color: $text-light;
+    max-width: 600px;
+    margin: 0 auto $spacing-lg;
+  }
+  
+  &__actions {
+    @include flex-center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+}
+
+// Features Section
+.features {
+  margin-bottom: $spacing-xxl;
+  
+  &__title {
+    font-size: $font-size-xl;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    color: $dark-color;
+  }
+}
+
+// Demo Section
+.demo {
+  margin-bottom: $spacing-xxl;
+  
+  &__title {
+    font-size: $font-size-xl;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    color: $dark-color;
+  }
+  
+  &__grid {
+    @extend .grid;
+    @extend .grid--3-cols;
+  }
+}
+
+// Code Block
+.code-block {
+  background: $dark-color;
+  color: $light-color;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  overflow-x: auto;
+  margin: $spacing-md 0;
+  
+  code {
+    color: $secondary-color;
+  }
+}
+
+// Footer
+.footer {
+  background: $dark-color;
+  color: $light-color;
+  text-align: center;
+  padding: $spacing-xl;
+  margin-top: $spacing-xxl;
+  
+  &__text {
+    font-size: $font-size-sm;
+    
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Utility Classes
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+
+// Animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
